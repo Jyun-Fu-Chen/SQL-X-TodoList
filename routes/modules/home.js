@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         where: { UserId: req.user.id }
       })
     })
-    .then(todos => res.render('index', { todos }))
+    .then(todos => res.render('home', { todos }))
     .catch(error => console.error(error))
 })
 
