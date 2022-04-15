@@ -10,13 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
       Todo.belongsTo(models.User)
     }
   }
   Todo.init({
     name: DataTypes.STRING,
-    done: DataTypes.BOOLEAN
+    isDone: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Todo',
